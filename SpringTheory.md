@@ -54,4 +54,15 @@
    
     <p>Name: ${name}</p>
     <p>Age: ${age}</p>
-
+## Sending data from View to Controller
+1. ### @ModelAttribute
+   we get the data after binding together
+2. ### @RequestParam
+    we can get the particular data
+    ```java
+    @PostMapping("/createuser")
+    public String registerUser(@ModelAttribute User user,@RequestParam("name") String fname) {
+    System.out.println(user);
+    System.out.println(fname);
+    return "register";
+    }
