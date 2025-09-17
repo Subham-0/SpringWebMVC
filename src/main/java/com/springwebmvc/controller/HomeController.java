@@ -6,8 +6,13 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.springwebmvc.entity.User;
 
 @Controller
 public class HomeController {
@@ -44,5 +49,19 @@ public class HomeController {
 		modelAndView.setViewName("login");
 		return modelAndView;
 	}
+	
+	@GetMapping("/register")
+	public String register() {
+		return "register";
+	}
+	
+	@PostMapping("/createuser")
+	public String registerUser(@ModelAttribute User user,@RequestParam("name") String fname) {
+		
+		System.out.println(user);
+		System.out.println(fname);
+		return "register";
+	}
+	
 
 }
