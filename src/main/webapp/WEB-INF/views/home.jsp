@@ -9,6 +9,7 @@
 </head>
 <body>
 	Welcome Home page!
+	<h4><a href="register">Click to Register</a></h4>
 	<br>
 
 	<%
