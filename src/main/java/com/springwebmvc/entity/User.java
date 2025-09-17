@@ -1,11 +1,21 @@
 package com.springwebmvc.entity;
 
+
+
 public class User {
 	private int id;
 	private String name;
 	private String email;
 	private String password;
+	private String image;
 	private String check;
+	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	public int getId() {
 		return id;
 	}

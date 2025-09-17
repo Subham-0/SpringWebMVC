@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,7 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-header text-center fs-3">Register Page</div>
+					<p class="fs-bold text-center">${message}</p>
 					<div class="card-body">
 						<form action="createuser" method="post">
 							<div class="mb-3">
@@ -37,6 +39,11 @@
 								<label for="exampleInputPassword1" class="form-label">Password</label>
 								<input type="password" class="form-control" name="password"
 									id="exampleInputPassword1">
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputImage" class="form-label">Image</label>
+								<input type="text" class="form-control" name="imageurl"
+									id="exampleInputImage">
 							</div>
 							<div class="mb-3 form-check">
 								<input type="checkbox" class="form-check-input" name="check"
